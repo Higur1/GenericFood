@@ -21,7 +21,9 @@ public class FoodController implements IFoodController {
 				if(linha.contains("Fruits")) {
 					separador = linha.split(",");
 					for(String palavra: separador) {
-						System.out.print(palavra+ "\t");
+						if(palavra != separador[2]) {
+							System.out.print(palavra+ "\t");
+						}
 					}
 					System.out.println("");
 				}
